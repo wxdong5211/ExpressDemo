@@ -1,0 +1,20 @@
+!!! transitional
+html
+  head
+    title  #{title}
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    form(method='post')
+      //comments
+      div
+        - var login_state
+        - if (login_state)
+          div #{login_state}
+        - else
+          span hahahahah
+        div name: 
+          input(name='user')
+        div pass: 
+          input(name='pass',type='password')
+        div
+          input(type='submit',value='sigin')

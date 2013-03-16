@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /
+User-Agent: BaiduSpider
+Disallow: /
+User-agent: YandexBot
+Disallow: / 
+User-Agent:msnbot
+Disallow: /

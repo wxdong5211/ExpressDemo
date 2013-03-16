@@ -1,0 +1,13 @@
+{
+    "appenders": [
+        { "type": "console" },
+        {
+            "type": "dateFile",
+            "filename": "logs/log.log"
+        }
+    ],
+    "levels": {
+        "file":  "INFO"
+    },
+    "replaceConsole":true
+}
