@@ -8,10 +8,17 @@ exports.post = function(req, res, next){
   var state = 'fail';
   var dao = require('../lib/dao/userdao');
   dao.query('test01',function(err, rows, fields){
-    console.log('The pool solution is: ', rows[0]);
-    if(rows[0]==null)
+    if(err!=null){
+        console.error(err);
+    }
+    var msg;
+    if(rows==null||rows[0]==null){
+        msg = 'empty';
         res.render('login', { title:'welcome it\'s login wxd modul',login_state:'empty' });
-    else 
+    } else {
+        msg = rows[0];
         res.render('login', { title:'welcome it\'s login wxd modul',login_state:rows[0]['YHM'] });
+    }
+    console.log('The pool solution is: ', msg);
   });
 };

@@ -1,20 +1,27 @@
 !!! transitional
 html
-  head
-    title  #{title}
-    link(rel='stylesheet', href='/css/style.css')
-  body
-    form(method='post')
-      //comments
-      div
-        - var login_state
-        - if (login_state)
-          div #{login_state}
-        - else
-          span hahahahah
-        div name: 
-          input(name='user')
-        div pass: 
-          input(name='pass',type='password')
-        div
-          input(type='submit',value='sigin')
+    head
+        title  #{title}
+        link(rel='stylesheet', href='/csslib/bootstrap.css')
+        link(rel='stylesheet', href='/csslib/bootstrap-responsive.css')
+        style body{padding-top: 60px;padding-bottom: 40px;}
+        //if lt IE 9
+            script(type='text/javascript', src='/jslib/html5shiv.js')
+        script(type='text/javascript', src='/jslib/jquery-1.9.0.js')
+        script(type='text/javascript', src='/jslib/bootstrap.js')
+    body
+        include ../navbar
+        form(method='post')
+            //comments
+            div
+                - var login_state
+                - if (login_state)
+                    div #{login_state}
+                - else
+                    span hahahahah
+                div name:
+                    input(name='user')
+                div pass:
+                    input(name='pass',type='password')
+                div
+                    input(type='submit',value='sigin')
