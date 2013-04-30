@@ -21,7 +21,7 @@ app.configure(function () {
     //app.use(express.basicAuth('username', 'password'));
     app.use(express.favicon());
     //app.use(express.logger('dev'));
-    app.use(log4js.connectLogger(logger, { level: log4js.levels.INFO }));
+    app.use(log4js.connectLogger(logger, { level: log4js.levels.INFO , format: ':remote-addr - - "HTTP/:http-version :method :status :content-length :url "  ":referrer" '}));
     // parse request bodies (req.body)
     app.use(express.bodyParser());
     // support _method (PUT in forms etc)
