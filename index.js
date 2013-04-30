@@ -32,6 +32,10 @@ app.configure(function () {
     //app.use(app.router);
     app.use(express.static(__dirname + '/public'));
 
+    app.use(function(req, res, next){
+        res.locals.req=req;
+        next();
+    });
     // load controllers
     require('./lib/boot')(app, { verbose:!module.parent });
     var errorHandler = require('./lib/errorHandler');
