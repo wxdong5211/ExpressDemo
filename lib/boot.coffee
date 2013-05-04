@@ -23,7 +23,7 @@ autoRequire = (parent,home,basedir,offsetpath,mode,verbose) ->
         name = name.split('.js')[0];
       else if ~name.indexOf '.coffee'
         name = name.split('.coffee')[0]
-      obj = require dirpath+'/'+ name
+      obj = require dirpath + '/'+ name
     catch e
       verbose and console.log 'autorequire fail %s:', e
     if obj is null or not obj.isController
