@@ -4,12 +4,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "express": "3.4.2",
-    "jade":"0.35.0",
-    "mysql":"2.0.0-alpha9",
+    "express": "4.2.0",
+    "jade":"1.3.1",
+    "mysql":"2.2.0",
     "generic-pool":"2.0.4",
-    "log4js":"0.6.9",
-    "coffee-script":"1.6.3"
+    "log4js":"0.6.14"
   },
   "author": {
     "name": "invalid",
@@ -26,5 +25,5 @@
     "node >=0.10.5"
   ],
   "readmeFilename": "Readme.md",
-  "main":"index.js"
+  "main":"index.coffee"
 }
