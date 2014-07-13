@@ -22,12 +22,12 @@ app.set 'view engine', 'jade'
 #  set views for error and 404 pages
 app.set 'views', __dirname + '/views'
 # parse request bodies (req.body)
-app.use bodyParser()
+app.use bodyParser.urlencoded extended: false
 # support _method (PUT in forms etc)
 app.use methodOverride()
 app.use cookieParser 'invalid\'s key'
 # session support app.use(session({ secret: 'keyboard cat', key: 'sid', cookie: { secure: true }}))
-app.use session()
+app.use session secret:'invalid\'s key',saveUninitialized: true,resave: true
 # app.use(express.basicAuth('username', 'password'));
 # favicon need require 'serve-favicon'
 # app.use favicon __dirname + '/public/favicon.ico'

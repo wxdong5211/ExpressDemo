@@ -1,4 +1,4 @@
-!!! transitional
+doctype html
 html
     head
         title  #{title}
@@ -13,7 +13,7 @@ html
             div#rMenu ul li{margin: 1px 0; padding: 0 5px;cursor: pointer;list-style:  none outside none;background-color: #DFDFDF;}
         //if lt IE 9
             script(type='text/javascript', src='/jslib/html5shiv.js')
-        script(type='text/javascript', src='/jslib/jquery-1.9.0.min.js')
+        script(type='text/javascript', src='/jslib/jquery-2.1.1.min.js')
         script(type='text/javascript', src='/jslib/bootstrap.min.js')
         script(type='text/javascript', src='/jslib/jquery.ztree.all-3.5.min.js')
         script(type='text/javascript', src='/js/mytree.js')
@@ -50,7 +50,7 @@ html
                 { id:234, pId:23, name:"叶子节点234"},
                 { id:3, pId:0, name:"父节点3 - 没有子节点", isParent:true}
             ];
-            $(document).ready(function(){
+            $(function(){
                 $.fn.zTree.init($("#depa"), setting, zNodes);
             });
             //-->

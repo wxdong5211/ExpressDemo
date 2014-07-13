@@ -1,15 +1,16 @@
-//-!!! transitional
-!!! 5
+doctype html
 html
   head
     title  #{title}
     link(rel='stylesheet', href='/csslib/bootstrap.css')
     link(rel='stylesheet', href='/csslib/bootstrap-responsive.css')
     style body{padding-top: 60px;padding-bottom: 40px;}
-    //if lt IE 9
-      script(type='text/javascript', src='/jslib/html5shiv.js')
-    script(type='text/javascript', src='/jslib/jquery-1.9.0.min.js')
-    script(type='text/javascript', src='/jslib/bootstrap.min.js')
+    != "<!--[if lt IE 9]>"
+    script(type='text/javascript', src='/jslib/html5shiv.js')
+    != "<![endif]-->"
+    script(type='text/javascript', src='/jslib/require.min.js')
+    script(type='text/javascript', src='/js/config.js')
+    script(type='text/javascript', src='/js/home.js')
   body
     include ../navbar
     .container
