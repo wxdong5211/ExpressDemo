@@ -11,7 +11,7 @@ var paths = {
 };
 
 gulp.task('clean', function(cb) {
-    del(['logs/**'],cb);
+    del(['logs/**/*'],cb);
 });
 
 gulp.task('scripts', ['clean'], function() {
