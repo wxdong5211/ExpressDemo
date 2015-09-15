@@ -6,18 +6,19 @@ html
         link(rel='stylesheet', href='/csslib/bootstrap-responsive.css')
         link(rel='stylesheet', href='/csslib/zTreeStyle/zTreeStyle.css')
         link(rel='stylesheet', href='/csslib/demo.css')
-        style
+        style.
             body{padding-top: 60px;padding-bottom: 40px;}
             .ztree li span.button.add {margin-left:2px; margin-right: -1px; background-position:-144px 0; vertical-align:top; *vertical-align:middle}
             div#rMenu {position:absolute; visibility:hidden; top:0; background-color: #555;text-align: left;padding: 2px;}
             div#rMenu ul li{margin: 1px 0; padding: 0 5px;cursor: pointer;list-style:  none outside none;background-color: #DFDFDF;}
-        //if lt IE 9
-            script(type='text/javascript', src='/jslib/html5shiv.js')
+        <!--[if lt IE 9]>
+        script(type='text/javascript', src='/jslib/html5shiv.js')
+        <![endif]-->
         script(type='text/javascript', src='/jslib/jquery-2.1.1.min.js')
         script(type='text/javascript', src='/jslib/bootstrap.min.js')
         script(type='text/javascript', src='/jslib/jquery.ztree.all-3.5.min.js')
         script(type='text/javascript', src='/js/mytree.js')
-        script(type='text/javascript')
+        script(type='text/javascript').
             <!--
             var zNodes =[
                 { id:1, pId:0, name:"父节点1 - 展开", open:true},
