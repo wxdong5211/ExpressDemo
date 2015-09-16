@@ -26,4 +26,8 @@ gulp.task('scripts', ['clean'], function() {
         .pipe(gulp.dest('public/js'));
 });
 
+gulp.task('watch',function(){
+    gulp.watch(paths.scripts,['scripts'])
+});
+
 gulp.task('default', ['scripts']);
